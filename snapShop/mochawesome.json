@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-06T09:00:32.784Z",
+    "end": "2020-10-06T09:01:09.081Z",
+    "duration": 6893,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fbaf067c-6b17-4510-889b-60cb202672c0",
+      "title": "",
+      "fullFile": "cypress\\integration\\snapshop.spec.js",
+      "file": "cypress\\integration\\snapshop.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "44e59ce0-d3fe-4eaf-96aa-6f885d9e1c37",
+          "title": "Cart management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check items",
+              "fullTitle": "Cart management Check items",
+              "timedOut": null,
+              "duration": 6893,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('h1').should('contain', \"SnapShot\");\ncy.get('input').type(\"Plage\");\ncy.get('.search-button').click();\ncy.get('.photo-container').trigger('mouseover');\ncy.get('.photo-container').should('be.visible'); //cy.get('h2').should('contain', 'Plage Images')\n//cy.get(':nth-child(1) > .active',{timeout:2000}).click({force:true})\ncy.get(':nth-child(1) > a').click({\n  force: true\n}); // cy.get('h2').should('contain', 'Mountain Pictures')\ncy.get(':nth-child(2) > a').click(); // cy.get('h2').should('contain', ' Beach Pictures')\ncy.get('ul > :nth-child(3) > a').click(); // cy.get('h2').should('contain', 'Bird Pictures')\ncy.get(':nth-child(4) > a').click();\ncy.waitForReact(4000); //cy.get('h2').should('contain', 'Food Pictures')\ncy.get(':nth-child(1) > img').trigger('mouseover');",
+              "err": {},
+              "uuid": "d92c158d-59cf-4059-8ce6-5b18d41c3d26",
+              "parentUUID": "44e59ce0-d3fe-4eaf-96aa-6f885d9e1c37",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d92c158d-59cf-4059-8ce6-5b18d41c3d26"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6893,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

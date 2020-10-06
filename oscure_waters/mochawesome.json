@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-05T14:59:02.078Z",
+    "end": "2020-10-05T14:59:14.872Z",
+    "duration": 9100,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "09a9d2cb-a394-425f-bee3-2573d49956bd",
+      "title": "",
+      "fullFile": "cypress\\integration\\panier\\panier.spec.js",
+      "file": "cypress\\integration\\panier\\panier.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+          "title": "Cart management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check items",
+              "fullTitle": "Cart management Check items",
+              "timedOut": null,
+              "duration": 2589,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.navbar-brand > .fa');\ncy.get('.navbar-brand > .badge');\ncy.get('.navbar-brand').should('contain', \"Items\");\ncy.get('.btn-success');",
+              "err": {},
+              "uuid": "377ed862-aad1-41fa-8ff6-fb346b1bcba7",
+              "parentUUID": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Refrech the items in the cart",
+              "fullTitle": "Cart management Refrech the items in the cart",
+              "timedOut": null,
+              "duration": 1128,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn-success').click();\ncy.get('.navbar-brand > .badge').should('contain', 0);",
+              "err": {},
+              "uuid": "9adc99bd-13f1-446a-b671-b2484726cfb5",
+              "parentUUID": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Recycle the items in the cart",
+              "fullTitle": "Cart management Recycle the items in the cart",
+              "timedOut": null,
+              "duration": 764,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(3) > .row > .col-md-4 > .btn-secondary > .fa').dblclick();",
+              "err": {},
+              "uuid": "83608e55-7de5-446b-967f-86a66ea48b20",
+              "parentUUID": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "add elements in the cart",
+              "fullTitle": "Cart management add elements in the cart",
+              "timedOut": null,
+              "duration": 1466,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// display contain 0 element\ncy.get(':nth-child(3) > .row > .col-md-1 > .badge').should('contain', 'Zero');\ncy.get(':nth-child(4) > .row > .col-md-1 > .badge').should('contain', 'Zero');\ncy.get(':nth-child(5) > .row > .col-md-1 > .badge').should('contain', 'Zero');\ncy.get(':nth-child(6) > .row > .col-md-1 > .badge').should('contain', 'Zero'); //add element\ncy.get(':nth-child(3) > .row > .col-md-4 > .btn-secondary > .fa').dblclick();\ncy.get(':nth-child(4) > .row > .col-md-4 > .btn-secondary > .fa').click();\ncy.get(':nth-child(5) > .row > .col-md-4 > .btn-secondary > .fa').click();\ncy.get(':nth-child(6) > .row > .col-md-4 > .btn-secondary > .fa').click(); // value change in display\ncy.get(':nth-child(3) > .row > .col-md-1 > .badge').should('contain', '2');\ncy.get(':nth-child(4) > .row > .col-md-1 > .badge').should('contain', '1');\ncy.get(':nth-child(5) > .row > .col-md-1 > .badge').should('contain', '1');\ncy.get(':nth-child(6) > .row > .col-md-1 > .badge').should('contain', '1');\ncy.get('.navbar-brand > .badge').should('contain', 4);",
+              "err": {},
+              "uuid": "1adf7f97-8528-4dbb-9f3f-e17bf0dc0b79",
+              "parentUUID": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "remove elements in the cart",
+              "fullTitle": "Cart management remove elements in the cart",
+              "timedOut": null,
+              "duration": 1834,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(3) > .row > .col-md-4 > .btn-secondary > .fa').dblclick();\ncy.get(':nth-child(3) > .row > .col-md-4 > .btn-info > .fa').click();\ncy.get(':nth-child(3) > .row > .col-md-1 > .badge').should('contain', '1');\ncy.get(':nth-child(4) > .row > .col-md-4 > .btn-secondary > .fa').click();\ncy.get(':nth-child(4) > .row > .col-md-4 > .btn-info > .fa').click();\ncy.get(':nth-child(4) > .row > .col-md-1 > .badge').should('contain', 'Zero');\ncy.get(':nth-child(5) > .row > .col-md-4 > .btn-secondary > .fa').click();\ncy.get(':nth-child(5) > .row > .col-md-4 > .btn-info').click();\ncy.get(':nth-child(5) > .row > .col-md-1 > .badge').should('contain', 'Zero');\ncy.get(':nth-child(6) > .row > .col-md-4 > .btn-secondary > .fa').click();\ncy.get(':nth-child(6) > .row > .col-md-4 > .btn-info').click();\ncy.get(':nth-child(6) > .row > .col-md-1 > .badge').should('contain', 'Zero');\ncy.get('.navbar-brand > .badge').should('contain', 1);",
+              "err": {},
+              "uuid": "86d13d65-6727-4624-93f4-ee42b2f4ab72",
+              "parentUUID": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete elements in the cart",
+              "fullTitle": "Cart management delete elements in the cart",
+              "timedOut": null,
+              "duration": 1319,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(3) > .row > .col-md-4 > .btn-danger > .fa').click();\ncy.get(':nth-child(4) > .row > .col-md-4 > .btn-danger > .fa').click();\ncy.get(':nth-child(4) > .row > .col-md-4 > .btn-danger').click();\ncy.get(':nth-child(3) > .row > .col-md-4 > .btn-danger').click();\ncy.get('.navbar-brand > .badge').should('contain', 0);",
+              "err": {},
+              "uuid": "9fcbccb6-0d0e-4f76-b471-dfc24fae0545",
+              "parentUUID": "e735769d-5b15-44bb-b286-bef7d4ab9169",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "377ed862-aad1-41fa-8ff6-fb346b1bcba7",
+            "9adc99bd-13f1-446a-b671-b2484726cfb5",
+            "83608e55-7de5-446b-967f-86a66ea48b20",
+            "1adf7f97-8528-4dbb-9f3f-e17bf0dc0b79",
+            "86d13d65-6727-4624-93f4-ee42b2f4ab72",
+            "9fcbccb6-0d0e-4f76-b471-dfc24fae0545"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9100,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

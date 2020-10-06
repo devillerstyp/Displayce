@@ -1,0 +1,26 @@
+{
+  "name": "snap_shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record --key c9e4f13f-cdf1-4556-9c2d-f6afcee46a76",
+    "cy:run:report": "cypress run --record --key c9e4f13f-cdf1-4556-9c2d-f6afcee46a76 --browser chrome --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "Devillers",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.3.0",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-react-selector": "^2.0.5",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "dependencies": {
+    "cypress-downloadfile": "^1.2.0"
+  }
+}

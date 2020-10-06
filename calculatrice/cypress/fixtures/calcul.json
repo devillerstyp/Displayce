@@ -1,0 +1,52 @@
+[
+    {
+        
+            "zero": 0,
+            "un": 1,
+            "deux": 2,
+            "trois": 3,
+            "quatre": 4,
+            "cinq": 5,
+            "six": 6,
+            "sept": 7,
+            "huit": 8,
+            "neuf": 9,
+            "dix": 10,
+            "dix_neuf": 19,
+            "neg_quatre": -4,
+            "vingt_chuit": 20.8,
+            "soixante_deux": 62,
+            "cquatre_vingt_neuf": -89,
+            "trente_un": 31,
+            "operator.trois_c_huit": 3.8,
+            "huit_c_quarenteDeux": 8.42,
+            "neg_trois": -3,
+            "trente_huit": 38,
+            "neg_dix": -10,
+            "trois_c_septSix": 3.76,
+            "soixante": 60,
+            "soixante_trois": 63,
+            "neg_qutre_cinq_zero": -450,
+            "cinquante": 50,
+            "neg_huit_cent_dix": -810,
+            "deuxcent_sept_cinq_cquatre": 275.4,
+            "trois_c_cinq": 3.05,
+            "zero_c_trois": 0.3,
+                       
+            "sign":"+/-",
+            "percent": "%",
+            "comma":  ".",
+            "clear": "AC",
+            "multiplication":"x",
+            "substraction":"-",
+            "addition": "+",
+            "equal":"=",
+            "division": "÷"
+            
+
+     
+
+    }
+
+
+]
